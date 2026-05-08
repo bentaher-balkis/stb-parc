@@ -1,6 +1,6 @@
 export enum TPEStatus {
-  Disponible,
-  Installe,
-  EnMaintenance,
-  HorsService
+  Disponible = 'Disponible',
+  Installe = 'Installe',
+  EnMaintenance = 'EnMaintenance',
+  HorsService = 'HorsService'
 }

@@ -1,35 +1,35 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Tpe } from '../models/tpe';
+import { TPE } from '../models/tpe';
 import { TPEStatus } from '../models/tpe-status';
 @Injectable({
   providedIn: 'root'
 })
 export class TPEService {
 
-  private apiUrl = 'https://localhost:5167/api/tpe';
+  private apiUrl = 'https://localhost:5167/api/TPE';
 
   constructor(private http: HttpClient) {}
 
   // 📥 GET ALL
-  getAll(): Observable<Tpe[]> {
-    return this.http.get<Tpe[]>(this.apiUrl);
+  getAll(): Observable<TPE[]> {
+    return this.http.get<TPE[]>(this.apiUrl);
   }
 
   // 📥 GET BY ID
-  getById(id: string): Observable<Tpe> {
-    return this.http.get<Tpe>(`${this.apiUrl}/${id}`);
+  getById(id: string): Observable<TPE> {
+    return this.http.get<TPE>(`${this.apiUrl}/${id}`);
   }
 
   // ➕ CREATE
-  create(tpe: Tpe): Observable<Tpe> {
-    return this.http.post<Tpe>(this.apiUrl, tpe);
+  create(TPE: TPE): Observable<TPE> {
+    return this.http.post<TPE>(this.apiUrl, TPE);
   }
 
   // ✏️ UPDATE
-  update(id: string, tpe: Tpe): Observable<Tpe> {
-    return this.http.put<Tpe>(`${this.apiUrl}/${id}`, tpe);
+  update(id: string, TPE: TPE): Observable<TPE> {
+    return this.http.put<TPE>(`${this.apiUrl}/${id}`, TPE);
   }
 
   // ❌ DELETE
@@ -38,12 +38,12 @@ export class TPEService {
   }
 
   // 🔁 ASSIGN TPE
-  assign(tpeId: string, userId: string): Observable<any> {
-    return this.http.post(`${this.apiUrl}/assign?tpeId=${tpeId}&userId=${userId}`, {});
+  assign(TPEId: string, userId: string): Observable<any> {
+    return this.http.post(`${this.apiUrl}/assign?TPEId=${TPEId}&userId=${userId}`, {});
   }
 
   // ⚙️ CHANGE STATUS
-  changeStatus(tpeId: string, status: TPEStatus): Observable<any> {
-    return this.http.put(`${this.apiUrl}/status?tpeId=${tpeId}&status=${status}`, {});
+  changeStatus(TPEId: string, status: TPEStatus): Observable<any> {
+    return this.http.put(`${this.apiUrl}/status?TPEId=${TPEId}&status=${status}`, {});
   }
 }

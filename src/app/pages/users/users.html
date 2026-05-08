@@ -6,7 +6,7 @@
   <input
     type="text"
     placeholder="Name"
-    [(ngModel)]="user.name"
+    [(ngModel)]="user.username"
   />
 
   <input
@@ -46,7 +46,7 @@
 
     <tr *ngFor="let user of users">
 
-      <td>{{ user.name }}</td>
+      <td>{{ user.username }}</td>
 
       <td>{{ user.email }}</td>
 

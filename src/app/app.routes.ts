@@ -90,7 +90,7 @@ export const routes: Routes = [
   {
     path: '**',
     redirectTo: ''
-  }
+  },
   {
   path: 'statistiques',
   component: Statistiques

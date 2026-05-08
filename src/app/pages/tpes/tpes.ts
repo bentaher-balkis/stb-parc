@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { TPEService } from '../../services/TPEService';
-import { Tpe } from '../../models/tpe';
+import { TPE } from '../../models/tpe';
 
 @Component({
   selector: 'app-tpes',
@@ -19,9 +19,9 @@ import { Tpe } from '../../models/tpe';
 })
 export class Tpes implements OnInit {
 
-  tpes: Tpe[] = [];
+  tpes: TPE[] = [];
 
-  tpe: Tpe = {} as Tpe;
+  tpe: TPE = {} as TPE;
 
   isEdit = false;
 
@@ -71,7 +71,7 @@ export class Tpes implements OnInit {
 
   }
 
-  editTpe(tpe: Tpe): void {
+  editTpe(tpe: TPE): void {
 
     this.tpe = { ...tpe };
 
@@ -92,7 +92,7 @@ export class Tpes implements OnInit {
 
   resetForm(): void {
 
-    this.tpe = {} as Tpe;
+    this.tpe = {} as TPE;
 
     this.isEdit = false;
 
