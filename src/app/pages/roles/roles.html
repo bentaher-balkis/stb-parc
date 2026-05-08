@@ -1,0 +1,61 @@
+<h1>Roles</h1>
+
+<div class="form-container">
+
+  <input
+    type="text"
+    placeholder="Role name"
+    [(ngModel)]="role.name"
+  />
+
+  <button (click)="saveRole()">
+
+    {{ isEdit ? 'Modifier' : 'Ajouter' }}
+
+  </button>
+
+</div>
+
+<table>
+
+  <thead>
+
+    <tr>
+
+      <th>Name</th>
+
+      <th>Actions</th>
+
+    </tr>
+
+  </thead>
+
+  <tbody>
+
+    <tr *ngFor="let role of roles">
+
+      <td>{{ role.name }}</td>
+
+      <td>
+
+        <button
+          class="edit-btn"
+          (click)="editRole(role)"
+        >
+          Modifier
+        </button>
+
+        <button
+          class="delete-btn"
+          (click)="deleteRole(role.id)"
+        >
+          Supprimer
+        </button>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+
+</table>

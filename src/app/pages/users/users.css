@@ -1,0 +1,67 @@
+.form-container {
+
+  display: flex;
+  gap: 10px;
+
+  margin-bottom: 20px;
+}
+
+input {
+
+  padding: 10px;
+
+  border-radius: 5px;
+
+  border: 1px solid #ccc;
+}
+
+button {
+
+  padding: 10px 15px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.edit-btn {
+
+  background: orange;
+
+  color: white;
+
+  margin-right: 10px;
+}
+
+.delete-btn {
+
+  background: red;
+
+  color: white;
+}
+
+table {
+
+  width: 100%;
+
+  background: white;
+
+  border-collapse: collapse;
+}
+
+th,
+td {
+
+  padding: 15px;
+
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+
+  background: #1e293b;
+
+  color: white;
+}

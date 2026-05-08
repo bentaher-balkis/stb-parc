@@ -1,0 +1,32 @@
+<h1>Notifications</h1>
+
+<div class="form-container">
+
+  <input
+    type="text"
+    placeholder="Title"
+    [(ngModel)]="notification.title"
+  />
+
+  <input
+    type="text"
+    placeholder="Message"
+    [(ngModel)]="notification.message"
+  />
+
+  <button (click)="saveNotification()">
+    Ajouter
+  </button>
+
+</div>
+
+<div
+  class="notification-card"
+  *ngFor="let notification of notifications"
+>
+
+  <h3>{{ notification.title }}</h3>
+
+  <p>{{ notification.message }}</p>
+
+</div>

@@ -1,0 +1,44 @@
+.form-container {
+
+  display: flex;
+
+  gap: 10px;
+
+  margin-bottom: 20px;
+}
+
+input {
+
+  padding: 10px;
+
+  border: 1px solid #ccc;
+
+  border-radius: 5px;
+}
+
+button {
+
+  padding: 10px 15px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.edit-btn {
+
+  background: orange;
+
+  color: white;
+
+  margin-right: 10px;
+}
+
+.delete-btn {
+
+  background: red;
+
+  color: white;
+}

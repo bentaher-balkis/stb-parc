@@ -1,0 +1,77 @@
+
+<h1>Users</h1>
+
+<div class="form-container">
+
+  <input
+    type="text"
+    placeholder="Name"
+    [(ngModel)]="user.name"
+  />
+
+  <input
+    type="email"
+    placeholder="Email"
+    [(ngModel)]="user.email"
+  />
+
+  <input
+    type="text"
+    placeholder="Role"
+    [(ngModel)]="user.role"
+  />
+
+  <button (click)="saveUser()">
+
+    {{ isEdit ? 'Modifier' : 'Ajouter' }}
+
+  </button>
+
+</div>
+
+<table>
+
+  <thead>
+
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Role</th>
+      <th>Actions</th>
+    </tr>
+
+  </thead>
+
+  <tbody>
+
+    <tr *ngFor="let user of users">
+
+      <td>{{ user.name }}</td>
+
+      <td>{{ user.email }}</td>
+
+      <td>{{ user.role }}</td>
+
+      <td>
+
+        <button
+          class="edit-btn"
+          (click)="editUser(user)"
+        >
+          Modifier
+        </button>
+
+        <button
+          class="delete-btn"
+          (click)="deleteUser(user.id)"
+        >
+          Supprimer
+        </button>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+
+</table>

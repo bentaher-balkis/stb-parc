@@ -1,0 +1,115 @@
+<div class="login-page">
+
+  <div class="login-card">
+
+    <div class="top-bg"></div>
+
+    <div class="content">
+
+      <!-- LOGO -->
+      <img
+        class="logo"
+        src="https://upload.wikimedia.org/wikipedia/fr/thumb/0/0e/STB_Bank.svg/1200px-STB_Bank.svg.png"
+        alt="logo"
+      />
+
+      <h1>STB</h1>
+
+      <h2>Connexion</h2>
+
+      <p class="subtitle">
+        Bienvenue ! Connectez-vous à votre espace
+        <span>Parc TPE</span>
+      </p>
+
+      <!-- FORM -->
+      <div class="form-box">
+
+        <!-- EMAIL -->
+        <div class="input-group">
+
+          <i class="fa-regular fa-user icon-left"></i>
+
+          <input
+            type="text"
+            placeholder="Nom d'utilisateur / Email"
+          />
+
+        </div>
+
+        <!-- PASSWORD -->
+        <div class="input-group">
+
+          <i class="fa-solid fa-lock icon-left"></i>
+
+          <input
+            [type]="showPassword ? 'text' : 'password'"
+            placeholder="Mot de passe"
+          />
+
+          <i
+            class="fa-regular"
+            [ngClass]="showPassword ? 'fa-eye' : 'fa-eye-slash'"
+            class="icon-right"
+            (click)="togglePassword()"
+          ></i>
+
+        </div>
+
+        <!-- OPTIONS -->
+        <div class="options">
+
+          <label class="remember">
+
+            <input type="checkbox" />
+
+            <span>Se souvenir de moi</span>
+
+          </label>
+
+          <a href="#">Mot de passe oublié ?</a>
+
+        </div>
+
+        <!-- LOGIN BTN -->
+        <button class="login-btn">
+
+          <i class="fa-solid fa-lock"></i>
+
+          Se connecter
+
+        </button>
+
+        <!-- DIVIDER -->
+        <div class="divider">
+          <span>OU</span>
+        </div>
+
+        <!-- OTP BTN -->
+        <button class="otp-btn">
+
+          <i class="fa-solid fa-shield-halved"></i>
+
+          Connexion avec code OTP
+
+        </button>
+
+      </div>
+
+      <!-- BOTTOM -->
+      <p class="bottom-text">
+
+        Vous n'avez pas de compte ?
+
+        <a href="#">Créer un compte</a>
+
+      </p>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer-bg"></div>
+
+  </div>
+
+</div>

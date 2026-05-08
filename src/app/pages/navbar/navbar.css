@@ -1,0 +1,32 @@
+.navbar {
+  height: 60px;
+  background: #1e293b;
+  color: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 20px;
+}
+
+.search-box input {
+  width: 250px;
+  padding: 8px;
+
+  border: none;
+  border-radius: 5px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.notification-btn {
+  border: none;
+  background: none;
+  color: white;
+  font-size: 20px;
+}

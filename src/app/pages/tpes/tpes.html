@@ -1,0 +1,71 @@
+<h1>TPEs</h1>
+
+<div class="form-container">
+
+  <input
+    type="text"
+    placeholder="Serial Number"
+    [(ngModel)]="tpe.serialNumber"
+  />
+
+  <input
+    type="text"
+    placeholder="Status"
+    [(ngModel)]="tpe.status"
+  />
+
+  <button (click)="saveTpe()">
+
+    {{ isEdit ? 'Modifier' : 'Ajouter' }}
+
+  </button>
+
+</div>
+
+<table>
+
+  <thead>
+
+    <tr>
+
+      <th>Serial Number</th>
+
+      <th>Status</th>
+
+      <th>Actions</th>
+
+    </tr>
+
+  </thead>
+
+  <tbody>
+
+    <tr *ngFor="let tpe of tpes">
+
+      <td>{{ tpe.serialNumber }}</td>
+
+      <td>{{ tpe.status }}</td>
+
+      <td>
+
+        <button
+          class="edit-btn"
+          (click)="editTpe(tpe)"
+        >
+          Modifier
+        </button>
+
+        <button
+          class="delete-btn"
+          (click)="deleteTpe(tpe.id)"
+        >
+          Supprimer
+        </button>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+
+</table>
