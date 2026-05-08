@@ -75,6 +75,10 @@ export const routes: Routes = [
         path: 'affectations',
         component: Affectations
       },
+      {
+        path: 'statistiques',
+        component: Statistiques
+      },
 
       // DEFAULT ADMIN PAGE
       {
@@ -91,10 +95,7 @@ export const routes: Routes = [
     path: '**',
     redirectTo: ''
   },
-  {
-  path: 'statistiques',
-  component: Statistiques
-}
+  
 
 
 ];
